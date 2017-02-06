@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Docker Project" preserve-order="true">
+    <test name="Docker Project Test" verbose="2" preserve-order="true">
+        <classes>
+            <class name="com.syful.tests.WhatDockerTest"></class>
+            <class name="com.syful.tests.DocsTest"></class>
+            <class name="com.syful.tests.BlogSearchTest"></class>
+            <class name="com.syful.tests.LoginTest"></class>
+            <class name="com.syful.tests.SignUpTest"></class>
+        </classes>
+    </test>
+</suite>
