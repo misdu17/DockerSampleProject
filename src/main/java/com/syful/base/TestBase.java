@@ -12,8 +12,8 @@ public class TestBase extends Driver{
     // Data read from property file
     protected String environment 	= myTestProperty.getEnvironment();
     protected String browserType 	= myTestProperty.getBrowser();
-    protected String userId 		= myTestProperty.getProperty(environment, "userId");
-    protected String password 		= myTestProperty.getProperty(environment, "password");
+    //protected String userId 		= myTestProperty.getProperty(environment, "userId");
+   // protected String password 		= myTestProperty.getProperty(environment, "password");
     protected String appURL 		= myTestProperty.getProperty(environment, "appURL");
 
     // Instance of all the pages

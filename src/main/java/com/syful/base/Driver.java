@@ -8,6 +8,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Driver {
     public static WebDriver driver;
     public static ReadPropertyFile myTestProperty = new ReadPropertyFile();
+    private static final String operatingSystem = System.getProperty("os.name").toUpperCase();
+
+    public static void main(String[] args) {
+        System.out.println(operatingSystem);
+    }
+
+
 
     public void setDriver(String browserType) {
         if (browserType.equals("chrome")) {
@@ -24,7 +31,11 @@ public class Driver {
 
     public WebDriver initChromeDriver() {
         System.out.println("Launching google chrome with new profile..");
-        System.setProperty("webdriver.chrome.driver", "/Users/Zakia/IntelliJProjects/DockerSampleProject/chromedriver");
+        if (operatingSystem.contains("MAC")){
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/chromedriver");
+        } else if (operatingSystem.contains("WINDOWS")){
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\chromedriver");
+        }
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         return driver;
@@ -32,7 +43,11 @@ public class Driver {
 
     public WebDriver initFirefoxDriver() {
         System.out.println("Launching Firefox browser..");
-        System.setProperty("webdriver.gecko.driver", "/Users/Zakia/IntelliJProjects/DockerSampleProject/geckodriver");
+        if (operatingSystem.contains("MAC")){
+            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/geckodriver");;
+        } else if (operatingSystem.contains("WINDOWS")){
+            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\geckodriver");;
+        }
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
         return driver;

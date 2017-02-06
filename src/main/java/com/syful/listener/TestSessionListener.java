@@ -27,6 +27,7 @@ public class TestSessionListener implements ITestListener{
 
     WebDriver driver;
     private static String fileSeperator = System.getProperty("file.separator");
+
     /**
      * Document
      */
@@ -34,7 +35,7 @@ public class TestSessionListener implements ITestListener{
 
     private static Date dateTime = new Date();
     private static String environment = TestBase.myTestProperty.getEnvironment();
-    private static String reportDir = "Results" + fileSeperator + environment + " " + dateTime + fileSeperator;
+    private static String reportDir = System.getProperty("user.dir") +"/Results" + fileSeperator + environment + " " + dateTime + fileSeperator;
 
     /**
      * PdfPTables
@@ -52,10 +53,10 @@ public class TestSessionListener implements ITestListener{
     private int nbExceptions = 0;
 
     /**
-     * JyperionListener
+     * TestSessionListener
      */
     public TestSessionListener() {
-        log("JyperionListener()");
+        log("TestSessionListener()");
 
         this.document = new Document();
         this.throwableMap = new HashMap<Integer, Throwable>();
