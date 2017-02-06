@@ -11,7 +11,7 @@ public class BlogSearchTest extends TestBase{
      * and validate the search title
      */
     @Test
-    public void testLoginWithInvalidData(){
+    public void testSearchPostOnBlogPage(){
         menuPage.blogWindow.click();
         menuPage.switchToNewWindow();
         Assert.assertEquals(blogPage.getPageTitle(), "Docker Blog - News and versions will be announced here");
