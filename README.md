@@ -6,13 +6,10 @@ This repository contains WebDriver code examples, exercises and tutorials for de
 
 You'll need to install:
 
-Java 8.
-
-Maven.
-
-Firefox.
-
-Chrome.
+1. Java 8.
+2. Maven.
+3. Firefox.
+4. Chrome.
 
 ## Contact
 
