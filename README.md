@@ -6,7 +6,7 @@ This repository contains WebDriver code examples, exercises and tutorials for de
 Examples with:
 
 
-Pre-requisites
+## Pre-requisites
 
 You'll need to install
 
@@ -15,6 +15,6 @@ Maven.
 Firefox.
 Chrome.
 
-# Contact
+## Contact
 
 If you have any questions about this repo, or need some help to contribute, please do not hesitate to contact me.
